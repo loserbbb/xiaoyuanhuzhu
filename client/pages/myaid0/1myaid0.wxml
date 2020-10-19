@@ -1,0 +1,50 @@
+<!-- <view class="wx-view_up" bindtap='toast2'>
+  <image class="pic wx-image_pic" mode="scaleToFill" src="https://i.loli.net/2018/05/24/5b06271daaa55.png" style="background-size:  100% 100%; background-position:  0% 0%; background-repeat:  no-repeat;  " />
+  <view class="wx-view_title">
+    标题
+    <br/>
+  </view>
+  <text class="wx-text_det">帮我带份饭把！！好的要当人没啊道路喀什都阿里山扩大是</text>
+  <text class="wx-text_time">5.30日 9.00</text>
+  <text class="wx-text_state">正在求助</text>
+  <text class="wx-text_coin">积分:25</text>
+</view>
+<view data-c_e_id="wx_view_down">
+  <text class="wx-text_name">Shanlon</text>
+  <button class="talkButton">
+    联系Ta
+  </button>
+  <button class="delButton">
+    确认完成
+  </button>
+  <button class="delButton">
+    取消求助
+  </button>
+</view> -->
+
+
+<view wx:for='{{assists}}' wx:for-item='assist' wx:for-index='idx' wx:key='*this'>
+  <view class="wx-view_up" bindtap='toast2'>
+    <image class="pic wx-image_pic" mode="scaleToFill" src='{{assist.picture.length > 0?assist.picture[0]:"https://i.loli.net/2018/05/24/5b06271daaa55.png"}}' style="background-size:  100% 100%; background-position:  0% 0%; background-repeat:  no-repeat;  " />
+    <view class="wx-view_title">
+      {{assist.title}}
+      <br/>
+    </view>
+    <text class="wx-text_det">{{assist.discription}}</text>
+    <text class="wx-text_time">{{assist.createTime}}</text>
+    <text class="wx-text_state">{{assist.status==0?'等待帮助':'正在进行'}}</text>
+    <text class="wx-text_coin">积分:{{assist.reward}}</text>
+  </view>
+  <view data-c_e_id="wx_view_down">
+    <text wx:if='{{assist.status == 1}}' class="wx-text_name">{{assist.userInfo.nickName}}</text>
+    <button wx:if='{{assist.status == 1}}' class="talkButton">
+      联系Ta
+    </button>
+    <button wx:if='{{assist.status == 1}}' class="delButton">
+      确认完成
+    </button>
+    <button class="delButton">
+      取消求助
+    </button>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="kuang" bindtap='clickPerson' >
+<image  src='../../image/daytask.png' class='daytask'></image>
+
+</view>
+
+
+  <view hidden="{{selectPerson}}">
+  <image class='image' src='../../image/qian.png' bindtap='tiao3'></image>
+   <image class='image1' src='../../image/fenxiang.png'></image>
+  
+ </view>
+
+<view class="kuang" bindtap='tiao2'>
+<image  src='../../image/reward.png' class='daytask'></image>
+</view>
+

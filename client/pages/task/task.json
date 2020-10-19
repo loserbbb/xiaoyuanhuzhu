@@ -1,0 +1,9 @@
+{
+    "navigationBarBackgroundColor": "#AEEEEE",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "任务",
+    
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+}

@@ -1,0 +1,395 @@
+page {
+  padding-bottom: 15vw;
+}
+
+.top {
+  width: 93%;
+  margin-left: 19rpx;
+  height: 30px;
+  position: static;
+  margin-top: 5px;
+}
+
+.topText {
+  color: #ccc;
+  margin-top: 3rpx;
+  margin-left: -5rpx;
+  font-size: 12px;
+  float: left;
+}
+
+.top button {
+  width: 50px;
+  height: 30px;
+  border: none;
+  padding: 0;
+}
+
+.topText1 {
+  color: #ccc;
+  margin-top: 3rpx;
+  margin-right: -5rpx;
+  font-size: 12px;
+  float: right;
+}
+
+.syImage {
+  width: 20px;
+  height: 20px;
+  margin-top: 5rpx;
+  margin-left: 10rpx;
+  float: left;
+}
+
+.wdImage {
+  width: 20px;
+  height: 20px;
+  margin-top: 5rpx;
+  margin-right: 10rpx;
+  float: right;
+}
+
+.information {
+  width: 93%;
+  margin-left: 25rpx;
+  height: 50px;
+  position: static;
+  margin-top: 5px;
+}
+
+.headImage {
+  width: 35px;
+  height: 35px;
+  margin-top: 5rpx;
+  margin-left: 15rpx;
+  float: left;
+  border-radius: 20px;
+}
+
+.nameText {
+  font-size: 13px;
+  display: block;
+  color: #696969;
+  width: 200rpx;
+  padding-top: 5px;
+  margin-left: 115rpx;
+}
+
+.timeText {
+  font-size: 10px;
+  color: #b5b5b5;
+  display: block;
+  width: 200rpx;
+  margin-top: 4px;
+  margin-left: 115rpx;
+}
+
+.detailsImageInline {
+  display: inline-block;
+}
+
+.detailsImageScroll-view {
+  width: 93%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  white-space: nowrap;
+}
+
+.detailsImage {
+  border-radius: 10px;
+  width: 30vw;
+  height: 30vw;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-left: 1vw;
+}
+
+.detailsTextView {
+  width: 100%;
+  margin-bottom: 5px;
+  padding-bottom: 8px;
+}
+
+.detailsText {
+  height: 30px;
+  width: 93%;
+  margin-left: 3.3vw;
+  display: block;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.detailsText1 {
+  font-size: 14px;
+  height: auto;
+  width: 93%;
+  margin-left: 3.3vw;
+  display: block;
+  color: #525252;
+}
+
+.integralView {
+  margin-bottom: 20rpx;
+}
+
+.integralText {
+  font-size: 14px;
+  width: 46%;
+  margin-left: 3.3vw;
+  color: #e00;
+}
+
+.distanceText {
+  float: right;
+  font-size: 13px;
+  width: 30%;
+  margin-top: 15rpx;
+  color: #696969;
+  margin-top: -45rpx;
+  height: 16px;
+  margin-left: 75vw;
+}
+
+.TelephoneText {
+  float: right;
+  font-size: 13px;
+  width: 29%;
+  color: #696969;
+  margin-top: -25px;
+  height: 16px;
+  margin-left: 75vw;
+}
+
+.TelephoneImage {
+  margin-left: 62vw;
+  width: 16px;
+  height: 16px;
+  margin-top: 9rpx;
+}
+
+.roundedRectangle3 {
+  float: right;
+  width: 30%;
+  height: 16px;
+  background-color: #dbdbdb;
+  border-radius: 7px;
+  margin-top: 10rpx;
+  margin-right: 2.5vw;
+}
+
+.line {
+  height: 1px;
+  background-color: #ccc;
+  width: 93%;
+  margin-left: 3.3vw;
+}
+
+.redLine {
+  height: 1.5px;
+  background-color: #8ee5ee;
+  width: 100%;
+}
+
+.roundedRectangle {
+  float: right;
+  width: 32%;
+  height: 16px;
+  background-color: #dbdbdb;
+  border-radius: 7px;
+  margin-top: 10rpx;
+  margin-right: 2.5vw;
+}
+
+.buttom {
+  position: fixed;
+  height: 15vw;
+  background-color: #aeeeee;
+  width: 100%;
+  bottom: -1rpx;
+}
+
+.provideHelp {
+  position: fixed;
+  width: 100px;
+  font-size: 15px;
+  background-color: #ff3030;
+  color: white;
+  overflow: hidden;
+  height: 35px;
+  border-radius: 8px;
+  right: 40rpx;
+  bottom: 20rpx;
+  text-align: center;
+  line-height: 35px;
+}
+
+
+.contact {
+  position: fixed;
+  width: 80px;
+  font-size: 15px;
+  background-color: #ffd700;
+  color: white;
+  overflow: hidden;
+  height: 35px;
+  border-radius: 8px;
+  right: 290rpx;
+  bottom: 20rpx;
+  text-align: center;
+  line-height: 35px;
+}
+/*
+.contact  button {
+  width: 80px;
+  height: 35px;
+  border: none;
+  padding: 0;
+}
+
+button::after {
+  border: none;
+  padding: 0;
+}
+
+.contact  ::after {
+  border: 1rpx solid #ffd700;
+}
+*/
+.liuyanImage {
+  width: 75rpx;
+  height: 58rpx;
+  margin-top: 15rpx;
+  margin-left: 90rpx;
+  float: left;
+}
+
+.liuyanText {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  color: #363636;
+  margin-top: 70rpx;
+  margin-left: 91rpx;
+  font-size: 13px;
+}
+
+.messageView {
+  margin-top: 8px;
+  height: 100rpx;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.message {
+  float: left;
+  border-radius: 3px;
+  margin-left: 25rpx;
+  height: 70rpx;
+  width: 65%;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 5px;
+}
+
+.messageButton {
+  float: left;
+  margin-top: 10rpx;
+  margin-left: 5rpx;
+  width: 115rpx;
+  height: 78rpx;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  background-color: #ff3030;
+  color: white;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.messageInformation {
+  width: 93%;
+  margin-left: 25rpx;
+  height: auto;
+  position: static;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.messageTime {
+  margin-left: 100rpx;
+  height: 12px;
+  width: auto;
+  font-size: 9px;
+  display: block;
+  color: #8a8a8f;
+}
+
+.messageName {
+  float: left;
+  margin-left: 5rpx;
+  height: 12px;
+  width: auto;
+  font-size: 9px;
+  display: block;
+  color: #545454;
+  margin-right: 30rpx;
+}
+
+.messageBoard {
+  margin-left: 100rpx;
+  height: auto;
+  width: 82%;
+  font-size: 12px;
+  display: block;
+  color: #8a8a8a;
+  min-height: 35px;
+}
+
+.Insert {
+  height: auto;
+}
+
+.InsertmessageName {
+  float: right;
+  height: 12px;
+  width: auto;
+  font-size: 9px;
+  display: block;
+  color: #545454;
+  margin-right: 25rpx;
+}
+
+.InsertMessageImage {
+  width: 35px;
+  height: 35px;
+  margin-top: 5rpx;
+  margin-right: 28rpx;
+  float: right;
+  border-radius: 20px;
+}
+
+.InsertMessagetext {
+  margin-left: 120rpx;
+  height: auto;
+  width: 68%;
+  font-size: 12px;
+  display: block;
+  color: #8a8a8a;
+  min-height: 35px;
+  text-align: left;
+  background-color: #f8f8ff;
+}
+
+.InsertMessageTime {
+  float: right;
+  height: 12px;
+  width: auto;
+  font-size: 9px;
+  display: block;
+  color: #8a8a8f;
+  margin-right: 10rpx;
+}

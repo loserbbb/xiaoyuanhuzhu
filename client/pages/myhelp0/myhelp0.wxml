@@ -1,0 +1,35 @@
+<view wx:for='{{assists}}' wx:for-item='assist' wx:for-index='idx' wx:key='*this'>
+  <view class='main' >
+    <view class='header'>
+      <!-- <text class='header-text'>订单号：123948</text> -->
+      <text class="wx-text_state">正在进行</text>
+    </view>
+    <view class='div'></view>
+    <view class="wx-view_up"  catchtap='bindAssistTap' data-assistid='{{assist.assistId}}'>
+      <image class="pic wx-image_pic" mode="scaleToFill" src='{{assist.picture.length > 0?assist.picture[0]:"../../image/sbIcon.jpg"}}' style="background-size:  100% 100%; background-position:  0% 0%; background-repeat:  no-repeat;  "
+      />
+      <view class="wx-view_title">
+        {{assist.title}}
+        <br/>
+      </view>
+      <text class="wx-text_det">{{assist.discription}}</text>
+      <text class="wx-text_time">{{assist.time}}</text>
+      <text class="wx-text_coin">积分:{{assist.reward}}</text>
+
+    </view>
+    <view class='div'></view>
+    <view class="wx-view_down">
+      <text wx:if='{{assist.status == 1}}' class="wx-text_name">{{assist.userInfo.nickName}}</text>
+      <button wx:if='{{assist.status == 1}}' class="talkButton" catchtap='bindChatTap' data-openid='{{assist.userInfo.openId}}'>
+        联系Ta
+      </button>
+      <!-- <button wx:if='{{assist.status == 1}}' class="newButton" catchtap='bindAchieveTap' data-assistid='{{assist.assistId}}'>
+        确认完成
+      </button> -->
+      <button class="delButton" catchtap='bindCancelTap' data-assistid='{{assist.assistId}}'>
+        取消帮助
+      </button>
+    </view>
+    <view class='div2'></view>
+  </view>
+</view>

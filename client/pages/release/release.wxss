@@ -1,0 +1,130 @@
+page {
+  display: block;
+  background-color: #f6f6f6;
+}
+
+.one {
+  margin-left: 5vw;
+  margin-top: 30rpx;
+  height: 90rpx;
+  width: 90%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+
+}
+
+.two {
+  border: 0px;
+  padding: 0;
+  border-radius: 1rpx;
+  margin-right: 5rpx;
+  height: 70rpx;
+  width: 95vw;
+  margin-left: 5vw;
+}
+
+.three {
+   margin-left: 5vw;
+  border: 0px;
+  padding: 0;
+  min-height: 38vw;
+  width: 85vw;
+  background: #fff;
+  padding-left: 5vw;
+
+}
+
+
+.fx-zx {
+  margin-top:40rpx;
+  position: static;
+  height: 120rpx;
+  bottom: 100rpx;
+  z-index: 2;
+  float: left;
+  background-size: 100%;
+  margin: 0 auto; 
+}
+
+.fx-zx button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  padding: 0;
+}
+
+.fx-zx image {
+  width: 50px;
+  height: 50px;
+}
+
+.f {
+  position: static;
+  margin-top: 20rpx;
+  height: 20vw;
+  width: 20vw;
+  bottom: 100rpx;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.f button {
+  width: 20vw;
+  height: 20vwx;
+  border: none;
+  padding: 0;
+}
+
+.f image {
+  width: 20vw;
+  height: 20vw;
+}
+
+.fd {
+  margin-left: 5rpx;
+  float: left;
+  position: relative;
+  margin-bottom: 2vw;
+}
+
+.dz {
+  margin-top: 40rpx;
+}
+.dztext{
+  font-size: 15px;
+  text-align: center;
+}
+
+.SeekHelp {
+  width: 100px;
+  font-size: 15px;
+  background-color: #ff3030;
+  color: white;
+  overflow: hidden;
+  height: 35px;
+  border-radius: 8px;
+  margin-top: 80rpx;
+}
+
+
+.SeekHelp button {
+  width: 100px;
+  height: 35px;
+  border: none;
+  padding: 0;
+}
+
+
+.SeekHelp ::after {
+  border: 1rpx solid #ff3030;
+}
+
+.input{
+	height: 100%;
+}

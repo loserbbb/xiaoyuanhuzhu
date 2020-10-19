@@ -1,0 +1,32 @@
+.one{
+  height: 100%;
+    width:100%;
+  margin-top: 20rpx;
+  background:#F4F4F4;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: none;
+  padding-left: 15px;
+  border-right: none;
+  align-items: center;
+  position: static;
+  transition: all 300ms ease;
+  padding-top: 25rpx;
+}
+
+.item1{
+    height:50rpx;
+    width:100rpx;
+}
+.item2{
+    height:50rpx;
+    width:100rpx;
+    float:right;
+    
+}
+.item3{
+  font-size: 10px;
+    height:50rpx;
+    width:200rpx;
+    display: flex;
+   
+}

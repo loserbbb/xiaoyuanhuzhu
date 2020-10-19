@@ -1,0 +1,11 @@
+<!--pages/comment/comment.wxml-->
+<view wx:for="{{commentList}}" wx:for-index="idx" wx:for-item='comment' wx:key='{{sender}}'>
+  <view class="one" bindtap='bindCommentTap' data-assistid='{{comment.word.assistId}}' data-sender='{{comment.sender}}'>
+
+    <image class="headImage" mode="scaleToFill" src="{{comment.avatarUrl}}"> </image>
+    <text class="newstext">{{comment.nickName}} 给你留言了</text>
+    <text class="time">{{comment.timeToNow}}</text>
+    <text class="newstext1">{{comment.word.content}}</text>
+    <image wx:if='{{comment.unread}}' class="redDotImage" mode="scaleToFill" src="../../image/redDot.png"> </image>
+  </view>
+</view>

@@ -1,0 +1,168 @@
+.main{
+  
+}
+.header{
+  display: flex;
+  height: 40rpx;
+}
+.header-text{
+  font-size: 23rpx;
+  font-weight: 600rpx;
+  width: 300rpx;
+  margin-top: 8rpx;
+  height: 23rpx;
+  text-indent: 35rpx;
+}
+.wx-view_up {
+  height: 180rpx;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.wx-image_pic {
+  margin: 28rpx auto auto 30rpx;
+  left: 0rpx;
+  top: 0rpx;
+  width: 160rpx;
+  height: 150rpx;
+  right: 0rpx;
+  bottom: 0rpx;
+  padding-left: 0rpx;
+  display: block;
+  position: absolute;
+  align-items: stretch;
+  margin-top: 18rpx;
+}
+
+.wx-view_title {
+  width: 450rpx;
+  height: 36rpx;
+  text-align: center;
+  text-indent: 0rpx;
+  letter-spacing: 1rpx;
+  font-size: 28rpx;
+  font-style: normal;
+  margin-top: 20rpx;
+  margin-left: 230rpx;
+  font-weight: 700rpx;
+   overflow: hidden;
+}
+
+.wx-text_det {
+  width: 400rpx;
+  height: 100rpx;
+  text-align: justify;
+  font-size: 20rpx;
+  margin-top: 59rpx;
+  margin-left: -295rpx;
+  font-weight: 600rpx;
+  color:gray;
+  overflow: hidden;
+}
+
+.wx-text_time {
+  width: 200rpx;
+  height: 30rpx;
+  font-size: 15rpx;
+  margin-top: 140rpx;
+  margin-left: 0rpx;
+}
+
+.wx-text_state {
+  width: 140rpx;
+  height: 23rpx;
+  color: rgb(248, 201, 7);
+  text-indent: 1rpx;
+  letter-spacing: 1rpx;
+  font-size: 23rpx;
+  margin-top: 8rpx;
+  margin-left: 350rpx;
+  margin-right: 10rpx;
+  font-weight: 700rpx;
+}
+
+.wx-text_coin {
+  width: 150rpx;
+  height: 50rpx;
+  color: rgb(255, 0, 0);
+  text-indent: 0rpx;
+  letter-spacing: 1rpx;
+  font-size: 25rpx;
+  margin-top: 75rpx;
+  margin-right: 0rpx;
+  margin-left: -10rpx;
+  font-weight: 600rpx;
+}
+
+.wx-view_down {
+  height: 53rpx;
+  display: flex;
+}
+
+.wx-text_name {
+  width: 160rpx;
+  height: 44rpx;
+  text-align: center;
+  font-size: 25rpx;
+  margin-left: 30rpx;
+  font-weight: 600rpx;
+  margin-top: 14rpx;
+  overflow: hidden;
+}
+
+
+.delButton{
+  padding: 1rpx 3rpx 1rpx 3rpx;
+  font-size: 20rpx;
+  color: rgb(248, 201, 7);
+  margin-left: 30rpx;
+  width: 120rpx;
+  height: 44rpx;
+  border: 1rpx solid rgb(248, 201, 7);
+  font-weight: 600rpx;
+  margin-top: 5rpx;
+  overflow: hidden;
+  
+}
+
+
+.talkButton{ 
+	padding: 1rpx 3rpx 1rpx 3rpx;
+  font-size: 20rpx;
+  color:  gray;
+  border-radius: 8px;
+ margin-top: 5rpx;
+  margin-right: auto;
+  margin-left: 0rpx;
+  width: 120rpx;
+  height: 44rpx;
+  border: 1px solid gray;
+   font-weight: 600rpx;
+overflow: hidden;
+}
+
+.newButton{
+	padding: 1rpx 3rpx 1rpx 3rpx;
+  font-size: 20rpx;
+  color:  gray;
+  border-radius: 8px;
+  margin-top: 5rpx;
+  margin-right: auto;
+  margin-left: 100rpx;
+  width: 140rpx;
+  height: 44rpx;
+   border: 1px solid gray;
+   font-weight: 600rpx;
+   overflow: hidden;
+}
+.div{
+  height: 2rpx;
+  background-color: gray;
+  opacity: 0.2;
+}
+.div2{
+    height: 10rpx;
+  background-color: gray;
+  opacity: 0.3;
+}

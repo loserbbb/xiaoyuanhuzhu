@@ -1,0 +1,33 @@
+/* client/pages/setLocation/setLocation.wxss */
+.container{
+	width: 100vw;
+	height: 100vh;
+}
+.map{
+	width: 100%;
+	height: 100%;
+}
+.cover-image{
+	position: absolute;
+	height: 50rpx;
+	width: 50rpx;
+	right: 30rpx;
+	top: 40rpx;
+}
+.cover-image_confirm{
+	position: absolute;
+	width: 150rpx;
+	height: 150rpx;
+	left: 50%;
+	margin-left: -75rpx;
+	bottom: 100rpx;
+}
+.cover-image_center{
+	position: fixed;
+	width: 30rpx;
+	height: 30rpx;
+	left: 50%;
+	margin-left: -15rpx;
+	top: 50%;
+	margin-top: -20rpx;
+}

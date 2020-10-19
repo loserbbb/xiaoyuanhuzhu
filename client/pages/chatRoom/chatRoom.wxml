@@ -1,0 +1,71 @@
+
+<scroll-view  scroll-y="true" scroll-into-view="bottom" id='chatRoom'>
+  <view wx:for='{{msgList}}' wx:for-index='idx' wx:for-item='msg' wx:key='{{sendTime}}'>
+    <view>
+      <text class="timetext" style="display:block">{{msg.sendTime}}</text>
+    </view>
+    <view class="one" wx:if='{{msg.who == 1}}' style="border: 1px solid rgba(0, 0, 0, 0);">
+      <image class="headImage" mode="scaleToFill" src="{{other.avatarUrl}}"> </image>
+      <view wx:if='{{msg.msgType == 0}}' class="textBox fl" style="word-wrap:break-word;">
+        {{msg.word}}
+      </view>
+      <view wx:if='{{msg.msgType == 1}}' class="imageBox imagefl" style="width:85vw">
+        <image catchtap='previewImage' data-src='{{msg.word}}' class="newsImage" mode="scaleToFill" src="{{msg.word}}"> </image>
+      </view>
+
+    </view>
+
+    <view wx:if='{{msg.who == 0}}' style="border: 1px solid rgba(0, 0, 0, 0);">
+      <image class="headImage1" mode="scaleToFill" src="{{me.avatarUrl}}"> </image>
+      <view wx:if='{{msg.msgType == 0}}' class="textBox fr" style="word-wrap:break-word;">
+        {{msg.word}}
+      </view>
+      <view class="imageBox imagefr" style="width:85vw">
+        <image wx:if='{{msg.msgType == 1}}' class="newsImage1" mode="scaleToFill" src="{{msg.word}}"> </image>
+      </view>
+    </view>
+
+  </view>
+
+</scroll-view>
+
+<view class="botton" id='bottom'></view>
+
+<!-- <view>
+  <text class="timetext" style="display:block">2018.5.22  15:30</text>
+</view>
+<view>
+  <image class="headImage" mode="scaleToFill" src="../../image/sbIcon.jpg"> </image>
+  <view class="textBox fl" style="width:88vw">阿斯顿撒大苏打啊实打实打死打阿斯顿阿斯顿啊实打实大树阿三阿斯顿阿三打死sadfdsfs 打阿斯顿阿斯顿啊实打实阿三</view>
+</view>
+<view>
+  <image class="headImage" mode="scaleToFill" src="../../image/sbIcon.jpg"> </image>
+  <view class="imageBox imagefl" style="width:85vw">
+    <image class="newsImage" mode="scaleToFill" src="../../image/fabu1.png"> </image>
+  </view>
+</view>
+
+
+<view>
+  <image class="headImage1" mode="scaleToFill" src="../../image/sbIcon.jpg"> </image>
+  <view class="textBox fr" style="width:88vw">受到了克发怒开朗的昆仑山搭街坊卡似的发射点发射点回复科技时代反抗精神的时间就手动阀手动阀建设的反抗集散地和 就是都会发科技时代和就开始电话发士</view>
+</view>
+<view>
+  <image class="headImage1" mode="scaleToFill" src="../../image/sbIcon.jpg"> </image>
+  <view class="imageBox imagefr" style="width:85vw">
+    <image class="newsImage1" mode="scaleToFill" src="../../image/fabu1.png"> </image>
+  </view>
+</view> -->
+
+
+<view class="handleBox">
+  <view class="information">
+    <input class="message" maxlength="200" focus='{{commentFoucs}}' placeholder="请输入聊天内容" value='{{inputContent}}' bindinput='bindInputMessage'></input>
+    <button class="messageButton" bindtap='bindSendMessage'>发送</button>
+    <view class='fx-zx'>
+      <button plain='true' bindtap="bindSendImg">
+        <image src='../../image/xuanze3.png'></image>
+      </button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="kuang" bindtap='tiao1' >
+<text >签到</text>
+</view>
+<view class="kuang">
+<text>邀请新朋友</text>
+</view>
+
+
+
+

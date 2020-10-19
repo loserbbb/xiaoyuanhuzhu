@@ -1,0 +1,51 @@
+/* pages/shouquan/shouquan.wxss */
+
+.Icon {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+  background:-moz-linear-gradient(top,#fff,#a0fefb);/*Mozilla*/
+  background:-webkit-gradient(linear,0 50%,100% 50%,from(#fff),to(#a0fefb));/*Old gradient for webkit*/
+  background:-webkit-linear-gradient(top,#fff,#a0fefb);/*new gradient for Webkit*/
+  background:-o-linear-gradient(top,#fff,#a0fefb); /*Opera11*/
+}
+.sbicon{
+  width: 50vw;
+  height: 50vw;
+  border-radius: 100%;
+  margin-bottom: 15vw;
+}
+
+.Jurisdiction {
+  width: 40vw;
+  font-size: 15px;
+  background-color: #AEEEEE;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 80rpx;
+  border: none;
+  padding: 0;
+}
+
+.Jurisdiction  button {
+  width: 100px;
+  height: 35px;
+  border: none;
+  padding: 0;
+}
+button::after{
+  border: none;
+  padding: 0;
+}
+.Jurisdiction  ::after {
+  border: 1rpx solid  #AEEEEE;
+  
+}
+
+
+
+

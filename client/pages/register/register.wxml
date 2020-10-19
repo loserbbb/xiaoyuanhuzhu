@@ -1,0 +1,73 @@
+<!--pages/register/register.wxml
+
+<form bindsubmit="formRegisterSubmit" bindreset="formReset">
+  
+  
+
+  <view class="section">
+    <view class="section__title">真实姓名</view>
+    <input name="realName" placeholder="please input here" />
+  </view>
+	<view class="section">
+    <view class="section__title">手机号</view>
+    <input name="phoneNumber" placeholder="please input here" />
+  </view>
+
+  
+	<view class="section section_gap">
+    <view class="section__title">性别</view>
+    <radio-group name="sex">
+      <label><radio value="0"/>男</label>
+      <label><radio value="1"/>女</label>
+    </radio-group>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+  </view>
+</form>
+-->
+
+
+<view class='Icon'>
+<view style="margin-top:30vw;">
+  <form bindsubmit="formRegisterSubmit" bindreset="formReset">
+    <view class="login_info" style="top:{{windowHeight * 0.35}}px;width: {{windowWidth * 0.92}}px;">
+      <view class="weui-cells weui-cells_after-title login_form">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">真实姓名</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入你的名字" type="text" maxlength="20"name="realName"  />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">手机号</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入手机号" type="text" maxlength="11" name="phoneNumber"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input"style='margin-top:15rpx;'>
+          <view class="weui-cell__hd">
+            <view class="weui-label">性别</view>
+          </view>
+          <view class="weui-cell__bd">
+            <radio-group name="sex">
+              <label>
+                <radio value="0" />男</label>
+              <label>
+                <radio value="1" />女</label>
+            </radio-group>
+          </view>
+        </view>
+
+        <view class="weui-btn-area"style='margin-top:45rpx;'>
+          <button class="weui-btn" formType="submit">注册</button>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>
+</view>

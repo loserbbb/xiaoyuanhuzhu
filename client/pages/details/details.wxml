@@ -1,0 +1,125 @@
+<view class="redLine" style="opacity:{{0.3}};margin-top: 20rpx;"></view>
+<view>
+  <view class="top">
+    <image class="syImage" mode="scaleToFill" src="../../image/sy.png"></image>
+    <button plain='true' class="topText" bindtap='jumpSY'>首页</button>
+    <image class="wdImage" mode="scaleToFill" src="../../image/wd.png"></image>
+    <button plain='true' class="topText1" bindtap='jumpWD'>我的</button>
+  </view>
+</view>
+<view class="redLine" style="opacity:{{0.3}}"></view>
+
+
+<view class="information">
+  <image class="headImage" mode="scaleToFill" src="{{assist.userInfo.avatarUrl}}" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;"> </image>
+  <text class="nameText">{{assist.userInfo.nickName}}</text>
+  <text class="timeText">{{assist.createTime}}</text>
+</view>
+
+<scroll-view class="detailsImageScroll-view" scroll-x="true">
+  <view class="detailsImageInline" wx:for="{{assist.picture}}" wx:for-item="pic">
+    <image catchtap='previewImage' data-src='{{pic}}' class="detailsImage" mode="aspectFill" src="{{pic}}" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;" />
+  </view>
+</scroll-view>
+
+
+<view class="integralView">
+  <text class="integralText">积分：{{assist.reward}}分</text>
+  <view class="roundedRectangle"></view>
+  <text class="distanceText">距离：{{assist.distance}}</text>
+
+</view>
+
+
+<view class="detailsTextView" bindtap='jumpDetails'>
+  <text class="detailsText">{{assist.title}}</text>
+  <text class="detailsText1">{{assist.discription}}</text>
+
+</view>
+<view class="line" style="opacity:{{0.5}}"></view>
+
+<view>
+  <image class="TelephoneImage" mode="scaleToFill" src="../../image/dh.png"> </image>
+  <view class="roundedRectangle3"></view>
+  <text class="TelephoneText">18135545225</text>
+
+
+</view>
+
+<view >
+
+  <map style="width:94%; height: 50vw;margin-left:3%" markers='{{markers}}' latitude='{{assist.location.latitude}}' longitude='{{assist.location.longitude}}'></map>
+
+</view>
+
+
+<form bindsubmit='submitComment'>
+  <view class="messageView">
+    <view class="information">
+      <image class="headImage" mode="scaleToFill" src="{{myHead}}" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;margin-left:-2rpx;margin-top:8rpx;"> </image>
+      <input class="message" maxlength="200" placeholder="{{replyTo?'回复：'+replyTo.targetname:'留言！了解信息'}}" focus='{{commentFoucs}}' bindblur='bindBlurComment' value='{{commentContent}}' name='commentContent'></input>
+      <button class="messageButton" form-type='submit'>留言</button>
+    </view>
+  </view>
+</form>
+
+
+
+<view wx:for="{{comments}}" wx:for-index="idx" wx:for-item="comment">
+  <view class="messageInformation" bindtap='bindReplyTap' data-targetReply='{{comment.commentId}}' data-targetName='{{comment.userInfo.nickName}}'>
+    <image class="headImage" mode="scaleToFill" src="{{comment.userInfo.avatarUrl}}" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;"> </image>
+    <text class="messageName">{{comment.userInfo.nickName}}</text>
+    <text class="messageTime">{{comment.dtime}}</text>
+    <text class="messageBoard">{{comment.content}}</text>
+  </view>
+  <view class="Insert" wx:for="{{comment.reply}}" wx:for-index="rdx" wx:for-item="reply">
+    <image class="InsertMessageImage" mode="scaleToFill" src="{{reply.userInfo.avatarUrl}}" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;"> </image>
+    <text class="InsertMessageTime">{{reply.dtime}}</text>
+    <text class="InsertmessageName">{{reply.targetName}}</text>
+    <text class="InsertmessageName">回复：</text>
+    <text class="InsertmessageName">{{reply.userInfo.nickName}}</text>
+    <view>
+      <text decode="{{true}}">&ensp;</text>
+    </view>
+    <text class="InsertMessagetext" style="display:block" bindtap='bindReplyTap' data-targetReply='{{reply.commentId}}' data-targetName='{{reply.userInfo.nickName}}'>{{reply.content}}</text>
+  </view>
+
+</view>
+<!-- 
+<view>
+  <view class="messageInformation">
+    <image class="headImage" mode="scaleToFill" src="../../image/wode.png" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;"> </image>
+    <text class="messageTime">7分钟前</text>
+    <text class="messageBoard">多少钱？</text>
+  </view>
+</view>
+ -->
+
+
+<cover-view class="buttom" wx:if="{{writing}}">
+  <cover-view bindtap='bindTapComment' style="width:30%;">
+    <cover-image class="liuyanImage" mode="scaleToFill" src="../../image/liuyan.png"></cover-image>
+    <cover-view class="liuyanText">留言</cover-view>
+  </cover-view>
+
+  <cover-view wx:if='{{!assist.isSelf}}' class="contact " bindtap='tiao'>联系TA</cover-view>
+  <!--  
+ <view>
+    <button wx:if='{{!assist.isSelf}}' class="contact " bindtap='tiao'>联系TA</button>
+  </view>
+ <view>
+    <button wx:if='{{assist.status==0 && !assist.isSelf}}' class="provideHelp" bindtap='offerHelp'>提供帮助</button>
+    <button wx:if='{{assist.status==0 && assist.isSelf}}' class="provideHelp" bindtap='cancalHelp'>取消</button>
+    <button wx:if='{{assist.status==1 && !assist.isSelf}}' class="provideHelp" disabled='true'>正在进行</button>
+    <button wx:if='{{assist.status==1 && assist.isSelf}}' class="provideHelp" bindtap='confirm'>确认完成</button>
+    <button wx:if='{{assist.status==2}}' class="provideHelp" disabled='true'>已完成</button>
+  </view>
+-->
+
+    <cover-view wx:if='{{assist.status==0 && !assist.isSelf}}' class="provideHelp" bindtap='offerHelp'>提供帮助</cover-view>
+    <cover-view wx:if='{{assist.status==0 && assist.isSelf}}' class="provideHelp" bindtap='cancelAssist'>取消</cover-view>
+    <cover-view wx:if='{{assist.status==1 && !assist.isSelf}}' class="provideHelp" disabled='true'>正在进行</cover-view>
+    <cover-view wx:if='{{assist.status==1 && assist.isSelf}}' class="provideHelp" bindtap='confirm'>确认完成</cover-view>
+    <cover-view wx:if='{{assist.status==2}}' class="provideHelp" disabled='true'>已完成</cover-view>
+
+</cover-view>

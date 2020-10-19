@@ -1,0 +1,22 @@
+<view class="Navigation" style="height:60rpx">
+  <image class="NavigationImage" mode="scaleToFill" style="margin-top:10rpx;background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;" src="../../image/xiaoxi.png"> </image>
+  <text class="NavigationAddress" style="margin-top:10rpx;">新任务上线，完成任务获得积分</text>
+</view>
+
+<view class="one" bindtap='bindCommentTap'>
+  <image class="news1" mode="scaleToFill" src='{{newComment?"../../image/news4.png":"../../image/news2.png"}}'> </image>
+  <text class="newstext">留言</text>
+  <text class="newstext1">{{newComment?'有人给你留言了，快来看看吧':'还没有收到留言哦'}}</text>
+	<!-- <image wx:if='{{newComment}}' class="redDotImage" style="top: -1vw;"mode="scaleToFill" src="../../image/redDot.png"> </image> -->
+</view>
+
+<view wx:for="{{chatList}}" wx:for-index="idx" wx:for-item='chat' wx:key='{{sender}}'>
+  <view class="one" bindtap='bindChatTap' data-sender='{{chat.sender}}'>
+
+    <image class="headImage" mode="scaleToFill" src="{{chat.avatarUrl}}"> </image>
+    <text class="newstext">{{chat.nickName}}</text>
+    <text class="time">{{chat.timeToNow}}</text>
+    <text class="newstext1">{{chat.msgType == 0?chat.word:'[图片]'}}</text>
+    <image wx:if='{{chat.unread}}' class="redDotImage" mode="scaleToFill" src="../../image/redDot.png"> </image>
+  </view>
+</view>

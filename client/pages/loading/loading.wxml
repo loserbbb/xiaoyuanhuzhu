@@ -1,0 +1,8 @@
+<!--pages/loading/loading.wxml-->
+<view wx:if="{{loged}}">
+	<button open-type='getUserInfo' bindtap='doLogin'>登陆</button>
+</view>
+<view wx:else>
+<text>正在登陆</text>
+</view>
+

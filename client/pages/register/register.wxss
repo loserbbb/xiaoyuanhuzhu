@@ -1,0 +1,35 @@
+/* pages/register/register.wxss */
+.Icon {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  background:-moz-linear-gradient(top,#fff,#a0fefb);/*Mozilla*/
+  background:-webkit-gradient(linear,0 50%,100% 50%,from(#fff),to(#a0fefb));/*Old gradient for webkit*/
+  background:-webkit-linear-gradient(top,#fff,#a0fefb);/*new gradient for Webkit*/
+  background:-o-linear-gradient(top,#fff,#a0fefb); /*Opera11*/
+  
+}
+.sbicon{
+border: none
+}
+.back_img{  
+  background: url(../../images/meBack.jpg) no-repeat;  
+  background-size:cover;  
+  -webkit-filter: blur(10px); /* Chrome, Opera */  
+  -moz-filter: blur(10px);  
+  -ms-filter: blur(10px);      
+  filter: blur(10px);   
+  z-index:0;  
+  position:relative;  
+}  
+.login_info{  
+  z-index: 999;  
+  position:absolute;  
+}  
+.login_form{  
+  border-radius:5px;  
+  margin-left:15%;  
+  background-color: rgba(255,255,255,0.2);  
+}  

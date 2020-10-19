@@ -1,0 +1,7 @@
+
+<view class='one' wx:for='{{list}}' wx:for-item='task'>
+
+<text class='item1'>{{task.discription}}</text>
+<text class='item2'>{{task.getReward}}</text>
+<text class='item3'>{{task.time}}</text>
+</view>

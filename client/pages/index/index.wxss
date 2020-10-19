@@ -1,0 +1,210 @@
+page {
+}
+
+.menu_box {
+  display: flex;
+  margin-top: 8rpx;
+  height: 80rpx;
+  width: 100%;
+  background-color: #fffafa;
+}
+
+.menu1, .menu2 {
+  flex: 1;
+  font-size: 40rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.borders {
+  border-bottom: 6rpx solid #ff8247;
+  color: #ff3030;
+}
+
+.Navigation {
+  height: 50rpx;
+  width: 100%;
+  background-color: #aeeeee;
+}
+
+.NavigationImage {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 15rpx;
+  float: left;
+}
+
+.NavigationAddress {
+  width: 70vw;
+  height: 40rpx;
+  margin-left: 15rpx;
+  font-size: 30rpx;
+  float: left;
+  color: #999;
+}
+
+.timeClass {
+  position: static;
+  margin-top: 20rpx;
+  height: 100rpx;
+  width: 50vw;
+  bottom: 100rpx;
+  padding: 0;
+  margin: 0 auto;
+  float: left;
+}
+
+.timeClass button {
+  width: 20vw;
+  height: 20vw;
+  border: none;
+  padding: 0;
+  color: white;
+  font-size: 40rpx;
+}
+
+.top {
+  width: 93%;
+  margin-left: 25rpx;
+  height: 50px;
+  position: static;
+  margin-top: 5px;
+}
+
+.headImage {
+  width: 35px;
+  height: 35px;
+  margin-top: 5rpx;
+  margin-left: 15rpx;
+  float: left;
+  border-radius: 20px;
+}
+
+.sexImage {
+  width: 13px;
+  height: 13px;
+  margin-left: 8rpx;
+  margin-right: 10rpx;
+  padding-top: 8px;
+  float: left;
+}
+
+.nameText {
+  font-size: 13px;
+  display: block;
+  color: #696969;
+  width: 200rpx;
+  padding-top: 5px;
+  margin-left: 115rpx;
+ 
+}
+
+.timeText {
+  font-size: 10px;
+  color: #b5b5b5;
+  display: block;
+  width: 200rpx;
+  margin-top: 4px;
+  margin-left: 115rpx;
+}
+
+.detailsImageInline {
+  display: inline-block;
+}
+
+.detailsImageScroll-view {
+  width: 93%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  white-space: nowrap;
+}
+
+.detailsImage {
+  border-radius: 10px;
+  width: 30vw;
+  height: 30vw;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-left: 1vw;
+}
+
+.detailsTextView {
+  width: 100%;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+
+.detailsText {
+  height: 30px;
+  width: 93%;
+  margin-left: 3.3vw;
+  display: block;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.integralText {
+  font-size: 14px;
+  width: 46%;
+  margin-left: 3.3vw;
+  color: #e00;
+}
+
+.distanceText {
+  float: right;
+  font-size: 13px;
+  width: 30%;
+  margin-right: 3.3vw;
+  margin-top: 10rpx;
+  color: #696969;
+  text-align: right;
+}
+
+.line {
+  height: 1px;
+  background-color: #ccc;
+  width: 93%;
+  margin-left: 3.3vw;
+}
+
+.news {
+  width: 60px;
+  height: 50px;
+  bottom: 100rpx;
+  padding: 0;
+  margin-top: 10rpx;
+  position: static;
+  float: right;
+}
+
+.news button {
+  width: 30px;
+  height: 29px;
+  border: none;
+  padding: 0;
+}
+
+.news image {
+  width: 30px;
+  height: 29px;
+}
+.funcarea{
+	width: 100%;
+	height: 50rpx;
+	text-align: center;
+	font-size: 32rpx;
+	color: rgb(88, 88, 88);
+}
+.fliter{
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.setlocation{
+	width: 50%;
+	height: 100%;
+	float: left;
+}

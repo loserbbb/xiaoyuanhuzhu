@@ -1,0 +1,88 @@
+<!--pages/index/index.wxml-->
+<view>
+  <view class="news">
+    <button plain='ture' bindtap='toast3'>
+      <image src="{{newMsg?'../../image/news3.png':'../../image/news.png'}}"></image>
+    </button>
+  </view>
+  <view class="Navigation">
+    <image class="NavigationImage" mode="scaleToFill" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;" src="../../image/dingwei3.png"> </image>
+    <text class="NavigationAddress">{{formattedAddress}}</text>
+  </view>
+  <view class="Navigation" style="height:60rpx">
+    <image class="NavigationImage" mode="scaleToFill" style="margin-top:10rpx;background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;" src="../../image/xiaoxi.png"> </image>
+    <text class="NavigationAddress" style="margin-top:10rpx;">新任务上线了，完成任务得积分啊</text>
+  </view>
+</view>
+<view class='funcarea'>
+	<picker class='fliter' range="{{assistType}}" value="{{typeindex}}" range-key='type' bindchange='bindPickerChange'>
+		筛选：{{assistType[typeindex].type}}
+	</picker>
+	<view class='setlocation' bindtap='setTap'>
+		点击设置搜索中心
+	</view>
+</view>
+<view class="menu_box">
+  <text class='menu1 {{menuTapCurrent=="0"?"borders":""}}' data-current="0" catchtap="menuTap">刚刚发布</text>
+  <text class='menu2 {{menuTapCurrent=="1"?"borders":""}}' data-current="1" catchtap="menuTap">距离最近</text>
+</view>
+<view hidden="{{menuTapCurrent!='0'}}">
+
+  <view class="infoblock" wx:for="{{assists}}" wx:for-index="idx" wx:for-item='assist' wx:key="assistId">
+    <view data-index="{{idx}}" bindtap='switchDetails'>
+      <view class="top">
+        <image class="headImage" mode="scaleToFill" src="{{assist.userInfo.avatarUrl}}" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;"> </image>
+        <!-- <open-data type="userAvatarUrl"></open-data> -->
+        <image class="sexImage" mode="scaleToFill" src="{{assist.userInfo.gender==1?'../../image/Male.png':'../../image/female.png'}}"> </image>
+        <text class="nameText">{{assist.userInfo.nickName}}</text>
+        <text class="timeText">{{assist.createTime}}</text>
+      </view>
+
+      <scroll-view class="detailsImageScroll-view" scroll-x="true">
+        <view class="detailsImageInline" wx:for="{{assist.picture}}" wx:for-item="pic" wx:key="*this">
+          <image catchtap='previewImage' data-src='{{pic}}' data-idx='{{idx}}' class="detailsImage" mode="aspectFill" src="{{pic}}" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;" />
+        </view>
+
+      </scroll-view>
+
+
+      <view class="detailsTextView">
+        <rich-text class="detailsText">{{assist.title}}</rich-text>
+        <text class="integralText">积分：{{assist.reward}}分</text>
+        <text class="distanceText">{{assist.distance}}</text>
+      </view>
+
+      <view class="line"></view>
+    </view>
+  </view>
+
+</view>
+<view hidden="{{menuTapCurrent!='1'}}">
+  <view class="infoblock" wx:for="{{assists}}" wx:for-index="idx" wx:for-item='assist' wx:key="assistId">
+    <view data-index="{{idx}}" bindtap='switchDetails'>
+      <view class="top">
+        <image class="headImage" mode="scaleToFill" src="{{assist.userInfo.avatarUrl}}" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;"> </image>
+        <!-- <open-data type="userAvatarUrl"></open-data> -->
+        <image class="sexImage" mode="scaleToFill" src="{{assist.userInfo.gender==1?'../../image/Male.png':'../../image/female.png'}}"> </image>
+        <text class="nameText">{{assist.userInfo.nickName}}</text>
+        <text class="timeText">{{assist.createTime}}</text>
+      </view>
+
+      <scroll-view class="detailsImageScroll-view" scroll-x="true">
+        <view class="detailsImageInline" wx:for="{{assist.picture}}" wx:for-item="pic" wx:key="*this">
+          <image class="detailsImage" mode="aspectFill" src="{{pic}}" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat;" />
+        </view>
+
+      </scroll-view>
+
+
+      <view class="detailsTextView">
+        <rich-text class="detailsText">{{assist.title}}</rich-text>
+        <text class="integralText">积分：{{assist.reward}}分</text>
+        <text class="distanceText">{{assist.distance}}</text>
+      </view>
+
+      <view class="line"></view>
+    </view>
+  </view>
+</view>

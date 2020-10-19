@@ -1,0 +1,20 @@
+<!--client/pages/setLocation/setLocation.wxml-->
+
+<!-- <view class="container">
+  <map id="map4select" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" markers="{{markers}}" show-location bindcontroltap="controltap" polyline="{{polyline}}" bindmarkertap="markertap" circles="{{circles}}" bindregionchange="regionchange">
+    <cover-image class="cover-image" bindtap="my_location" src="../../image/mylocation.png" />
+    <cover-image class="cover-image_confirm" bindtap="confirm_bag" src="../../image/quren.png" />
+  </map>
+</view> -->
+
+<view class="container">
+<map class='map' id="map4select" longitude="{{location.longitude}}" latitude="{{location.latitude}}" circles="{{circles}}" bindregionchange="regionchange">
+	<cover-image class='cover-image' src="../../image/mylocation.png" bindtap="my_location"></cover-image>
+	<cover-view class='cover-image_confirm'>
+		<button type="warn" bindtap='submitLocation'>
+		确认
+		</button>
+	</cover-view>
+	<cover-image class='cover-image_center' src="../../image/locationcenter.png"></cover-image>
+</map>
+</view>

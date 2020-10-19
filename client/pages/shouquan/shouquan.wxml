@@ -1,0 +1,9 @@
+<!--pages/shouquan/shouquan.wxml-->
+
+<view class="Icon">
+  <image class="sbicon" src="../../image/sbIcon.jpg" mode="aspectFit"></image>
+
+  <button class="Jurisdiction " open-type='getUserInfo' bindgetuserinfo='bindgetuserinfo'>授权</button>
+</view>
+
+

@@ -1,0 +1,98 @@
+page{
+  background-color:#F8F8FF;
+}
+.Navigation {
+  height: 50rpx;
+  width: 100%;
+  background-color: #Aeeeee;
+}
+
+.NavigationImage {
+  width: 55rpx;
+  height: 40rpx;
+  margin-left: 15rpx;
+  float: left;
+}
+
+.NavigationAddress {
+  width: 70vw;
+  height: 40rpx;
+  margin-left: 15rpx;
+  font-size: 30rpx;
+  float: left;
+  color: white;
+}
+
+.one {
+  margin-top: 20rpx;
+  height: 100rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: none;
+  padding-left: 15px;
+  border-right: none;
+  text-align: left;
+  align-items: center;
+}
+
+.news1 {
+  float: left;
+  padding-left: 4vw;
+  padding-top: 15rpx;
+  width: 70rpx;
+  height: 65rpx;
+  
+}
+
+.headImage {
+  width: 10vw;
+  height: 10vw;
+  margin-top: 13rpx;
+  margin-left: 4vw;
+  float: left;
+  border-radius: 20px;
+}
+.redDotImage {
+  position:relative;   
+ right: 64vw;
+ top: -6vw;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 20px;
+}
+
+
+.newstext {
+  margin-top: 15rpx;
+  align-content: left;
+  float: left;
+  width: 50vw;
+  font-size: 26rpx;
+  margin-left: 2vw;
+
+}
+.newstext1 {
+  margin-top: 3rpx;
+  align-content: left;
+  float: left;
+  width: 60vw;
+  font-size: 24rpx;
+  margin-left: 2vw;
+  color:#ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+.time{
+ margin-top: 15rpx;
+ margin-right: 50rpx;
+  text-align: right;
+  float: right;
+  width: 25vw;
+  font-size: 24rpx;
+   color:#696969;
+
+
+}

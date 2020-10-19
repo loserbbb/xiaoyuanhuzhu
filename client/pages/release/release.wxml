@@ -1,0 +1,69 @@
+<view style='margin-top:5vw;'></view>
+<view wx:if="{{tempFilePaths.length==0}}" class='fx-zx'>
+  <button style='  width: 750rpx' plain='true' bindtap="chooseimage">
+    <image src='../../image/xuanze1.png'></image>
+  </button>
+</view>
+<view wx:else class='fx-zx'>
+  <button style='margin-left:5vw;  width: 120rpx' plain='ture' bindtap="chooseimage">
+    <image src='../../image/xuanze1.png'></image>
+  </button>
+</view>
+<view wx:for="{{tempFilePaths}}" class='fd' wx:for-index="idx" wx:key="*this">
+  <!-- {{index}}: {{item.message}} -->
+  <icon type="clear" size="20" bindtap="delImage" data-index="{{idx}}" style="position:absolute; left:81rpx;margin-top:-10rpx;" />
+  <image src="{{item}}" style="width:120rpx; height: 120rpx;background-color: #eeeeee;" mode="aspectFill" />
+</view>
+<view>
+  <view class="one">
+    <view class="two">
+      <input class='input' name='title' placeholder="请输入求助标题(15字内)" bindblur="bindTitleInputBlur" maxlength="15" value='{{title}}' bindinput='checkCanSubmit'></input>
+    </view>
+  </view>
+  <view class='one'>
+    <picker bindchange='bindPickerChange' range-key='type' value="{{typeindex}}" range="{{typearray}}">
+      <view class="two">
+        选择分类：{{typearray[typeindex].type}}
+      </view>
+    </picker>
+  </view>
+	<view class='one'>
+    <picker bindchange='bindPicker1Change' value="{{multiindex}}" range="{{multitask}}">
+      <view class="two">
+        收到确认帮助后是否锁定任务：{{multitask[multiindex]}}
+      </view>
+    </picker>
+  </view>
+  <view class="one">
+    <view class="two">
+      <input class='input' name='reward' placeholder="请输入悬赏积分(万以内)" bindblur='bindRewardInputBlur' maxlength="4" type="number" value='{{reward}}' bindinput='checkCanSubmit'></input>
+    </view>
+  </view>
+  <view class="three" bindtap='bindDiscriptionTap'>
+    <textarea bindblur="bindDescriptionTextAreaBlur" auto-height="ture" placeholder="请输入任务描述(150字以内)" maxlength="150" value='{{discription}}' focus='{{discriptionFocus}}' bindinput='checkCanSubmit'></textarea>
+  </view>
+
+
+
+
+  <view class='dz'>
+
+
+    <view wx:if="{{location == null}}" class='f'>
+
+      <button bindtap="getLocation" plain='ture'>
+        <image src='../../image/dingwei.png'></image>
+      </button>
+    </view>
+    <view wx:else class='f'>
+      <image src='../../image/dingwei1.png'></image>
+    </view>
+
+  </view>
+  <view>
+    <text class="dztext" style="display:block">定位</text>
+  </view>
+  <view>
+    <button class="SeekHelp" formType="submit" disabled="{{canSubmit}}" bindtap='formAssistSubmit'>提交</button>
+  </view>
+</view>

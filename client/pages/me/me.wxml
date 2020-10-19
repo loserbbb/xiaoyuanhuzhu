@@ -1,0 +1,41 @@
+<view>
+  <view class="two">
+    <view class="img2">
+      <image class="img3" src='{{userInfo.avatarUrl}}'></image>
+    </view>
+
+    <text class="nametxt1" style="display:block">{{realName}}</text>
+  </view>
+
+
+
+
+  <view class="one" style='margin-top:60rpx' bindtap='integral'>
+    <image src='../../image/jifen.png' class='img'></image>
+    <text class="nametxt">我的积分：{{coin}}</text>
+    <image src='../../image/jiantou.png' class='img1'></image>
+  </view>
+
+
+
+  <view class="one" bindtap='toast'>
+    <image src='../../image/qiuzhu.png' class='img'></image>
+    <text class="nametxt" >已完成的求助</text>
+    <image src='../../image/jiantou.png' class='img1'></image>
+  </view>
+  <view class="three" bindtap='toast1'>
+    <image src='../../image/qiuzhu1.png' class='img'></image>
+    <text class="nametxt" >正在进行的求助</text>
+    <image src='../../image/jiantou.png' class='img1'></image>
+  </view>
+  <view class="one" bindtap='toast2'>
+    <image src='../../image/bangzhu.png' class='img'></image>
+    <text class="nametxt">已完成的帮助 </text>
+    <image src='../../image/jiantou.png' class='img1'></image>
+  </view>
+    <view class="three" bindtap='toast3'>
+    <image src='../../image/bangzhu1.png' class='img'></image>
+    <text class="nametxt">正在进行的帮助 </text>
+    <image src='../../image/jiantou.png' class='img1'></image>
+  </view>
+</view>
